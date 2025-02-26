@@ -26,8 +26,7 @@ jobs:
 
       - name: Run Postman collection
         run: |
-          newman run your-collection.json \
-          -e your-environment.json \
+          newman run Regression Testing.postman_collection.json \
           --reporters cli,junit \
           --reporter-junit-export results/junit-report.xml
 
