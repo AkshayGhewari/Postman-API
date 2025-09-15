@@ -33,14 +33,6 @@ jobs:
             --reporter-junit-export results/junit-report.xml \
             --reporter-htmlextra-export results/html-report.html
 
-      # Upload JUnit XML for download
-      - name: Upload JUnit test results
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: junit-report
-          path: results/junit-report.xml
-
       # Upload HTML report for download
       - name: Upload HTML test report
         if: always()
@@ -49,11 +41,4 @@ jobs:
           name: html-report
           path: results/html-report.html
 
-      # Show results inside GitHub Actions UI
-      - name: Publish Test Report to GitHub UI
-        if: always()
-        uses: dorny/test-reporter@v1
-        with:
-          name: API Test Results
-          path: results/junit-report.xml
-          reporter: java-junit
+
