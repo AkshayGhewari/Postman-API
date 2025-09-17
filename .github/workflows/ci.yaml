@@ -31,7 +31,8 @@ jobs:
           newman run RegressionTesting.postman_collection.json \
             --reporters cli,junit,htmlextra \
             --reporter-junit-export results/junit-report.xml \
-            --reporter-htmlextra-export results/html-report.html
+            --reporter-htmlextra-export results/html-report.html \
+            --reporter-htmlextra-title "API Test Report - Login Tests"
 
       # Upload HTML report for download
       - name: Upload HTML test report
