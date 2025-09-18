@@ -284,8 +284,8 @@
 	],
 	"variable": [
 		{
-			"key": "",
-			"value": "https://postman-echo.com"
+			"key": "baseUrl",
+			"value": ""
 		}
 	]
 }
