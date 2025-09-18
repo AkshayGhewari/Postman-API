@@ -29,7 +29,7 @@ jobs:
       - name: Run Postman collection
         run: |
           newman run RegressionTesting.postman_collection.json \
-           1--env-var baseUrl="${{ secrets.BASEURL }}" \
+           1--env-var baseUrl="${{ secrets.BASE_URL }}" \
             --reporters cli,junit,htmlextra \
             --reporter-junit-export results/junit-report.xml \
             --reporter-htmlextra-export results/html-report.html \
